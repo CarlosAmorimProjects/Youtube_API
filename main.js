@@ -1,4 +1,4 @@
-// oeth key
+// client_id key
 const CLIENT_ID = '805702408092-hoj8arl5nsm7o8c7eu18unhm0dcvk0ra.apps.googleusercontent.com';
 const DISCOVERY_DOCS = [
   'https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest'
