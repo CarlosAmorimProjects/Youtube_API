@@ -12,7 +12,7 @@ const videoContainer = document.getElementById('video-container');
 const searchInput = document.getElementById('search-input');
 const orderInput = $("input:radio[name=option]:checked").val();
 
-// actualizou muitoooooo
+// actualizou muitooo
 
 
 // Form submit
