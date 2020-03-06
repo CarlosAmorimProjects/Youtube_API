@@ -12,7 +12,7 @@ const videoContainer = document.getElementById('video-container');
 const searchInput = document.getElementById('search-input');
 const orderInput = $("input:radio[name=option]:checked").val();
 
-alert.orderInput;
+
 
 
 // Form submit
@@ -85,6 +85,7 @@ function handleSignoutClick() {
     $("form").on("submit", function(e) {
          e.preventDefault();
          const search = searchInput.value;
+         window.alert(orderInput);
 
       var request = gapi.client.youtube.search.list({
         part: 'snippet',
