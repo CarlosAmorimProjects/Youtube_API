@@ -2,10 +2,11 @@
 
 https://youtube-api-search2.herokuapp.com/index.html
 
-## Youtube API to send a request and receive the response from the Youtube API
+## Youtube API to send a request and receive the response from the Youtube API, the videos
+## can be sorted by most recent or most viewed
 
 ### Author : Carlos Amorim
 
 
 
-![Captura de ecrã de 2020-03-05 18-11-37](https://user-images.githubusercontent.com/37440264/76012236-e0dcc600-5f0d-11ea-9fff-b3549a95fd54.png)
+![Captura de ecrã de 2020-03-09 22-53-33](https://user-images.githubusercontent.com/37440264/76264204-02fd7d80-6259-11ea-82d0-d4c758b65d2a.png)
