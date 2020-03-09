@@ -10,15 +10,12 @@ const signoutButton = document.getElementById('signout-button');
 const searchForm = document.getElementById('search-form');
 const videoContainer = document.getElementById('video-container');
 const searchInput = document.getElementById('search-input');
-const orderInput = $("input:radio[name=option]:checked").val();
-
-// actualizou muitooo
-
 
 // Form submit
 searchForm.addEventListener('submit', e => {
   e.preventDefault();
-  init();
+  const orderInput = document.querySelector('input[name="radio"]:checked').value;
+  init(orderInput);
 
 });
 
@@ -71,7 +68,7 @@ function handleSignoutClick() {
 }
 
 // initialize the key and launchs function to send the search string and receive the data from youtube api
-  function init () {
+  function init (orderInput) {
     gapi.client.setApiKey = CLIENT_ID;
     gapi.client.load("youtube", "v3", function () {
   
@@ -82,20 +79,17 @@ function handleSignoutClick() {
 // function to send the search string and receive the data from youtube api
   $(function (){
     
-    $("form").on("submit", function(e) {
-         e.preventDefault();
-         const search = searchInput.value;
-         window.alert(orderInput);
+      const search = searchInput.value;
 
       var request = gapi.client.youtube.search.list({
         part: 'snippet',
         type: 'video',
         q: search, 
         maxResults: 24,
-        order: "viewCount"
+        order: orderInput
        });
-  
-       let output = '<br><h4 class="center-align">Most popular</h4>';
+       
+       let output = (orderInput == "viewCount") ? '<br><h4 class="center-align">Most Viewed</h4>' : '<br><h4 class="center-align">Most Recent</h4>';
   
        request.execute(function(response) {
          console.log(response);
@@ -119,7 +113,5 @@ function handleSignoutClick() {
         });
   
          });
-       });
-
 
 }
